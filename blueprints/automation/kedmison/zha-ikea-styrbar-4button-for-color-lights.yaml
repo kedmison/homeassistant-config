@@ -34,7 +34,7 @@ blueprint:
     * <integer> color temperature in Kelvin (e.g. 2700)
     * <#RGBCODE> RGB color code (e.g. #FFFAFA)
     * <ColorName> color name (e.g. lightskyblue) listed in [homeassistant source](https://github.com/home-assistant/core/blob/dev/homeassistant/util/color.py) which is based on [CSS3 color names](https://www.w3.org/TR/css-color-3/#svg-color). 
-    If the entry isn't a number, and doesn't start with a '#', then it is treated as a colorname.
+    If the entry isn''t a number, and doesn''t start with a "\#", then it is treated as a colorname.
 
     The "left" and "right" buttons can be assigned to a long button press
     action. This allows you to assign, e.g., a scene or anything else. Use the left
