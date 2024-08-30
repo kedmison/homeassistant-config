@@ -1,3 +1,6 @@
+---
+# This blueprint controls lights through an IKEA STYRBAR remote connected via ZHA.
+
 blueprint:
   name: ZHA - IKEA STYRBAR control for IKEA TRADFRI color bulbs
   description: 'Control lights with an IKEA STYRBAR four button remote (the square ones),
