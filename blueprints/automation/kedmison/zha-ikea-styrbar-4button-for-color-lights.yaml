@@ -113,7 +113,7 @@ blueprint:
       default: []
       selector:
         action: {}
-  source_url: https://github.com/kedmison/homeassistant-config/blob/main/blueprints/automation/kedmison/zha-ikea-styrbar-4button-for-color-lights.yaml
+  source_url: https://raw.githubusercontent.com/kedmison/homeassistant-config/main/blueprints/automation/kedmison/zha-ikea-styrbar-4button-for-color-lights.yaml
 
 mode: restart
 max_exceeded: silent
