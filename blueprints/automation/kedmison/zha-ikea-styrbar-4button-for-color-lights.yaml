@@ -6,32 +6,24 @@ blueprint:
   description: 'Control lights with an IKEA STYRBAR four button remote (the square ones),
     for use with [ZHA](https://www.home-assistant.io/integrations/zha/).
 
-    This is largely based on [Malte](https://community.home-assistant.io/u/Malte)''s [blueprint](https://community.home-assistant.io/t/zha-ikea-four-button-remote-styrbar-for-lights-e2001-e2002/384482) 
-    and extends it with color selection.
-    It, is based on [SwerveShot](https://community.home-assistant.io/u/SwerveShot)''s [version](https://community.home-assistant.io/t/zha-ikea-four-button-remote-for-lights/347657)
-    which is based on the work of [frenck](https://community.home-assistant.io/u/frenck)
-    with the five button version.
-
-
-    This blueprint uses a helper to define a list of colors, RGB color hex codes, and/or color temperatures to cycle through.  This helper can be changed dynamically without re-creating the automation.
-    An initial useful set of values for the helper 4000, 2700, 2200, 1780, gold, darksalmon, pink, mediumpurple, mediumblue.
-    The helper has to be manually created before using the blueprint.
+    It adds color selection and extends [Malte](https://community.home-assistant.io/u/Malte)''s [blueprint](https://community.home-assistant.io/t/zha-ikea-four-button-remote-styrbar-for-lights-e2001-e2002/384482).
+    That, in turn, is based on [SwerveShot](https://community.home-assistant.io/u/SwerveShot)''s [version](https://community.home-assistant.io/t/zha-ikea-four-button-remote-for-lights/347657)
+    which is based on the work of [frenck](https://community.home-assistant.io/u/frenck).
 
 
     Pressing the up button will turn on the lights at the last set brightness and color (unless
-    the force brightness is toggled on in the blueprint).
-
-
-    Pressing the down button will turn the lights off again.
+    the force brightness is toggled on in the blueprint). Pressing the down button will turn the lights off again.
 
 
     Pressing and holding the up/down buttons will change the brightness smoothly and
     can be pressed and hold until the brightness is satisfactory.
 
 
-    Short presses of the "left" and "right" buttons rotate through the colours in the helper.
+    Short presses of the "left" and "right" buttons rotate through the colours in the associated helper.
     Valid values are: <integer> color temperature in Kelvin (e.g. 2700), <#RGBCODE> RGB color code (e.g. #FFFAFA), or <ColorName> color name (e.g. lightskyblue) listed in [homeassistant source](https://github.com/home-assistant/core/blob/dev/homeassistant/util/color.py) which is based on [CSS3 color names](https://www.w3.org/TR/css-color-3/#svg-color). 
     If the entry isn''t a number, and doesn''t start with a "\#", then it is treated as a colorname.
+    An initial useful set of values for the helper could be 4000, 2700, 2200, 1780, gold, darksalmon, pink, mediumpurple, mediumblue.
+    
 
     The "left" and "right" buttons can be assigned to a long button press
     action. This allows you to assign, e.g., a scene or anything else. Use the left
@@ -90,8 +82,8 @@ blueprint:
           mode: slider
     color_set:
       name: Color and Temperature List
-      description: Select (or create) a helper listing the colors for the light(s) to cycle through with left and right button presses.
-        Accepts color names or integer numeric values for temperature in Kelvin.
+      description: Select (or create) a helper listing the colors to use with left and right button presses.
+        Accepts color names, RGB hex color codes, or integer numeric values for temperature in Kelvin.
       default: []
       selector:
         entity:
@@ -113,8 +105,8 @@ blueprint:
       default: []
       selector:
         action: {}
-  source_url: https://raw.githubusercontent.com/kedmison/homeassistant-config/main/blueprints/automation/kedmison/zha-ikea-styrbar-4button-for-color-lights.yaml
-
+  source_url: https://github.com/kedmison/homeassistant-config/blob/main/blueprints/automation/kedmison/zha-ikea-styrbar-4button-for-color-lights.yaml
+  
 mode: restart
 max_exceeded: silent
 variables:
